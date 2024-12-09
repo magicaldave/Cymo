@@ -34,6 +34,7 @@ PYOXIDIZER_CACHE_DIR="$(pwd)/oxcache" \
 
 ls -R .
 
+echo $TARGET_OS $UMO_IN $UMO_OUT
 
 mv build/$TARGET_TRIPLE/release/install/${UMO_IN} ./${UMO_OUT}
 mv build/$TARGET_TRIPLE/release/install/lib dep/
