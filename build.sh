@@ -11,9 +11,11 @@ mkdir -p oxcache
 wget -O pycurl.zip $PYCURL_URL
 mkdir -p dep/bin && unzip -j pycurl.zip "pycurl.libs/*" -d dep/bin/
 
-python -m venv .venv
-ls -R
-source .venv/bin/activate
+if [ ! -z "$USE_VENV" ]; then
+    python -m venv .venv
+    source .venv/bin/activate
+fi
+
 python -m pip install pyoxidizer
 
 PYOXIDIZER_CACHE_DIR="$(pwd)/oxcache" \
