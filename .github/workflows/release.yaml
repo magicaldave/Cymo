@@ -28,7 +28,7 @@ jobs:
         run: ./build.sh ${{ matrix.pycurl }} ${{ matrix.triple }}
 
       - name: compress
-        run: 7z a -tzip ${{matrix.archive}} ./umo ./dep
+        run: 7z a -tzip ${{matrix.archive}} ./umo-${{ matrix.triple }} ./dep
 
       - name: upload
         uses: softprops/action-gh-release@v2
