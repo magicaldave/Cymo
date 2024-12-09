@@ -18,6 +18,7 @@ if [ "$TARGET_OS" = "Linux" ]; then
 else
     UMO_IN="${UMO_IN}.exe"
     UMO_OUT="${UMO_OUT}.exe"
+    echo $TARGET_OS $UMO_IN $UMO_OUT
     powershell -Command "Invoke-WebRequest -Uri $PYCURL_URL -OutFile pycurl.zip"
     unzip -j pycurl.zip "pycurl-7.45.3.data/platlib/*" -d dep/bin/
 fi
