@@ -11,7 +11,7 @@ mkdir -p oxcache
 wget -O pycurl.zip $PYCURL_URL
 mkdir -p dep/bin && unzip -j pycurl.zip "pycurl.libs/*" -d dep/bin/
 
-if [ ! -z "$USE_VENV" ]; then
+if [ -n "${USE_VENV+x}" ]; then
     python -m venv .venv
     source .venv/bin/activate
 fi
