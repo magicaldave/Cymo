@@ -4,7 +4,7 @@ set -euo
 
 PYCURL_URL="${1:-https://files.pythonhosted.org/packages/64/d2/a4c45953aed86f5a0c9717421dd725ec61acecd63777dd71dfe3d50d3e16/pycurl-7.45.3-cp310-cp310-manylinux_2_28_x86_64.whl}"
 TARGET_TRIPLE="${2:-x86_64-unknown-linux-gnu}"
-TARGET_OS="${3:-linux}"
+TARGET_OS="${3:-Linux}"
 
 rm -rf dep build
 mkdir -p oxcache
