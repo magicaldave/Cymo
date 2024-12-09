@@ -33,9 +33,9 @@ python -m pip install pyoxidizer
 PYOXIDIZER_CACHE_DIR="$(pwd)/oxcache" \
     pyoxidizer build exe install --release
 
-ls -R .
-
-echo $TARGET_OS $UMO_IN $UMO_OUT
-
 mv build/$TARGET_TRIPLE/release/install/${UMO_IN} ./${UMO_OUT}
 mv build/$TARGET_TRIPLE/release/install/lib dep/
+
+if [ "$TARGET_OS" != "Linux" ]; then
+    mv build/$TARGET_TRIPLE/release/install/*.dll .
+fi

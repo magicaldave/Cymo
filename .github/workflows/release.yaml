@@ -42,7 +42,7 @@ jobs:
         run: ./build.sh ${{ matrix.pycurl }} ${{ matrix.triple }} ${{ runner.os }}
 
       - name: compress
-        run: 7z a -tzip ${{matrix.archive}} ./umo-${{ matrix.triple }}${{ runner.os == 'Windows' && '.exe' || '' }} ./dep
+        run: 7z a -tzip ${{matrix.archive}} ./umo-${{ matrix.triple }}${{ runner.os == 'Windows' && '.exe' || '' }} ./dep ${{ runner.os == 'Windows' && '*.dll' || '' }}
 
       - name: upload
         uses: softprops/action-gh-release@v2
