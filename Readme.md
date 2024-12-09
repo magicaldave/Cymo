@@ -23,6 +23,8 @@ Caveats which apply to all platforms:
 
 Virustotal results for both [Windows](https://www.virustotal.com/gui/file/6c634b4e52a937c0cf1b017a61d237613f5e9fe8b5b1dd78243d2d3b7823b905/details) and [Linux](https://www.virustotal.com/gui/file/3c74cb3934d5351a216af6c7cbfee668dff4dceea0ff571631dfa4b3c7d8919a/details) builds of Cymo are available.
 
+Kaspersky results for [Windows](https://opentip.kaspersky.com/6C634B4E52A937C0CF1B017A61D237613F5E9FE8B5B1DD78243D2D3B7823B905/extracted?tab=upload) and [Linux](https://opentip.kaspersky.com/3C74CB3934D5351A216AF6C7CBFEE668DFF4DCEEA0FF571631DFA4B3C7D8919A/results?tab=upload) builds are also readily available.
+
 All of the above are why Cymo is not meant to be distributed to end users and I have to say again:
 
 # DO NOT DOWNLOAD THIS AND ASK ME FOR HELP
