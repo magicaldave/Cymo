@@ -23,7 +23,7 @@ jobs:
           - os: windows-2019
             archive: cymo-windows.zip
             pycurl: "https://files.pythonhosted.org/packages/79/33/7c8a17717e1a13fddf5bb50468830f0141162a901167806378ec23784426/pycurl-7.45.3-cp310-cp310-win_amd64.whl"
-            triple: "x86_64-pc-windows-gnu"
+            triple: "x86_64-pc-windows-msvc"
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
