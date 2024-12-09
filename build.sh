@@ -14,7 +14,7 @@ mkdir -p dep/bin
 
 echo $TARGET_OS
 
-if [ "$TARGET_OS" = "linux" ]; then
+if [ "$TARGET_OS" = "Linux" ]; then
     unzip -j pycurl.zip "pycurl.libs/*" -d dep/bin/
 else
     unzip -j pycurl.zip "pycurl-7.45.3.data/platlib/*" -d dep/bin/
