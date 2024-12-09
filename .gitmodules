@@ -1,0 +1,3 @@
+[submodule "umo"]
+	path = umo
+	url = git@gitlab.com:magicaldave1/umomwd.git
