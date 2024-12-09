@@ -8,20 +8,13 @@ TARGET_OS="${3:-Linux}"
 
 rm -rf dep build
 mkdir -p oxcache
+mkdir -p dep/bin
 
 if [ "$TARGET_OS" = "Linux" ]; then
     wget -O pycurl.zip $PYCURL_URL
-else
-    powershell -Command "Invoke-WebRequest -Uri $PYCURL_URL -OutFile pycurl.zip"
-fi
-
-mkdir -p dep/bin
-
-echo $TARGET_OS
-
-if [ "$TARGET_OS" = "Linux" ]; then
     unzip -j pycurl.zip "pycurl.libs/*" -d dep/bin/
 else
+    powershell -Command "Invoke-WebRequest -Uri $PYCURL_URL -OutFile pycurl.zip"
     unzip -j pycurl.zip "pycurl-7.45.3.data/platlib/*" -d dep/bin/
 fi
 
