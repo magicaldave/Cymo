@@ -11,13 +11,16 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-20.04]
+        os: [ubuntu-20.04, windows-2019]
         include:
           - os: ubuntu-20.04
-            binary: umo
             archive: cymo-ubuntu.zip
             pycurl: "https://files.pythonhosted.org/packages/64/d2/a4c45953aed86f5a0c9717421dd725ec61acecd63777dd71dfe3d50d3e16/pycurl-7.45.3-cp310-cp310-manylinux_2_28_x86_64.whl"
             triple: "x86_64-unknown-linux-gnu"
+          - os: windows-2019
+            archive: cymo-windows.zip
+            pycurl: "https://files.pythonhosted.org/packages/79/33/7c8a17717e1a13fddf5bb50468830f0141162a901167806378ec23784426/pycurl-7.45.3-cp310-cp310-win_amd64.whl"
+            triple: "x86_64-pc-windows-gnu"
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +36,7 @@ jobs:
           key: ${{ runner.os }}-PyOx
 
       - name: build
-        run: ./build.sh ${{ matrix.pycurl }} ${{ matrix.triple }}
+        run: ./build.sh ${{ matrix.pycurl }} ${{ matrix.triple }} ${{ runner.os }}
 
       - name: compress
         run: 7z a -tzip ${{matrix.archive}} ./umo-${{ matrix.triple }} ./dep
