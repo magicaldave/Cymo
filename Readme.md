@@ -21,6 +21,8 @@ Caveats which apply to all platforms:
 1. Umo *will not run* if you don't set the environment variable `UMO_NO_NOTIFICATIONS`. It will blow up and explode in your face and not work and you will be sad and confused. This may be fixable.
 2. Umo *must* be used with `--threads 1` when performing operations which may be multithreaded (I think this is just `install` but I'm uncertain)
 
+Virustotal results for both [Windows](https://www.virustotal.com/gui/file/6c634b4e52a937c0cf1b017a61d237613f5e9fe8b5b1dd78243d2d3b7823b905/details) and [Linux](https://www.virustotal.com/gui/file/3c74cb3934d5351a216af6c7cbfee668dff4dceea0ff571631dfa4b3c7d8919a/details) builds of Cymo are available.
+
 All of the above are why Cymo is not meant to be distributed to end users and I have to say again:
 
 # DO NOT DOWNLOAD THIS AND ASK ME FOR HELP
