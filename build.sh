@@ -8,13 +8,16 @@ TARGET_OS="${3:-Linux}"
 UMO_IN="umo"
 UMO_OUT="${UMO_IN}-${TARGET_TRIPLE}"
 
-rm -rf build *.so
+rm -rf build
 mkdir -p oxcache
 
 if [ "$TARGET_OS" = "Linux" ]; then
+    rm -rf *.so
     wget -O pycurl.zip $PYCURL_URL
     unzip -j pycurl.zip "pycurl.libs/*" -d .
+    ls -R .
 else
+    rm -rf *.dll
     UMO_IN="${UMO_IN}.exe"
     UMO_OUT="${UMO_OUT}.exe"
     echo $TARGET_OS $UMO_IN $UMO_OUT
