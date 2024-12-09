@@ -30,5 +30,7 @@ python -m pip install pyoxidizer
 PYOXIDIZER_CACHE_DIR="$(pwd)/oxcache" \
     pyoxidizer build exe install --release
 
+ls -R .
+
 mv build/$TARGET_TRIPLE/release/install/umo ./umo-$TARGET_TRIPLE
 mv build/$TARGET_TRIPLE/release/install/lib dep/
