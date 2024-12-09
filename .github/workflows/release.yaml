@@ -21,10 +21,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@nightly
 
       - name: build
-        run: build.sh ${{ matrix.pycurl }} ${{ matrix.triple }}
+        run: ./build.sh ${{ matrix.pycurl }} ${{ matrix.triple }}
 
       - name: compress
         run: 7z a -tzip ${{matrix.archive}} ./umo ./dep
