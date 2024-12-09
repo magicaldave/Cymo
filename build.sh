@@ -9,6 +9,10 @@ TARGET_OS="${3:-linux}"
 rm -rf dep build
 mkdir -p oxcache
 
+if [ "$TARGET_OS" != "Linux" ]; then
+    apt install -y wget
+fi
+
 wget -O pycurl.zip $PYCURL_URL
 mkdir -p dep/bin
 
