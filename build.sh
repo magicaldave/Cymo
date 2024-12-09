@@ -12,6 +12,8 @@ mkdir -p oxcache
 wget -O pycurl.zip $PYCURL_URL
 mkdir -p dep/bin
 
+echo $TARGET_OS
+
 if [ "$TARGET_OS" = "linux" ]; then
     unzip -j pycurl.zip "pycurl.libs/*" -d dep/bin/
 else
