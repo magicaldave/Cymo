@@ -24,6 +24,14 @@ jobs:
         with:
           submodules: true
 
+      - name: Pyoxidizer Cache
+        id: cache-PyOx
+        uses: actions/cache@v3
+        with:
+          path: |
+            ./oxcache
+          key: ${{ runner.os }}-PyOx
+
       - name: build
         run: ./build.sh ${{ matrix.pycurl }} ${{ matrix.triple }}
 
