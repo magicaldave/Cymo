@@ -244,7 +244,7 @@ def make_exe():
     # `add_python_resources()` adds these objects to the binary, with a load
     # location as defined by the packaging policy's resource location
     # attributes.
-    exe.add_python_resources(exe.pip_install(["-r", "../requirements.txt"]))
+    exe.add_python_resources(exe.pip_install(["-r", "./umo/requirements.txt"]))
 
     # Read Python files from a local directory and add them to our embedded
     # context, taking just the resources belonging to the `foo` and `bar`
