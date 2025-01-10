@@ -31,7 +31,7 @@ def make_exe():
     # levels. The default optimization level used by Python is 0.
     # policy.bytecode_optimize_level_zero = True
     # policy.bytecode_optimize_level_one = True
-    # policy.bytecode_optimize_level_two = True
+    policy.bytecode_optimize_level_two = True
 
     # Package all available Python extensions in the distribution.
     # policy.extension_module_filter = "all"
