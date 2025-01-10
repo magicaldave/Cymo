@@ -132,7 +132,7 @@ def make_exe():
     # python_config.allocator_backend = "jemalloc"
 
     # Use mimalloc as Python's memory allocator.
-    # python_config.allocator_backend = "mimalloc"
+    python_config.allocator_backend = "mimalloc"
 
     # Use snmalloc as Python's memory allocator.
     # python_config.allocator_backend = "snmalloc"
