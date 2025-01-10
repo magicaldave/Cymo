@@ -251,7 +251,28 @@ def make_exe():
     # Python packages.
     exe.add_python_resources(exe.read_package_root(
         path="./umo/src/",
-        packages=["archive", "asyncfn", "cache", "checks", "clrs", "config", "dl", "handlers", "helper", "icon", "log", "mega", "momw_types", "notification", "rar", "sso", "subcmds", "umo", "umocurldl", "umonxm", "wayback", "pseudomagic"],
+        packages=["asyncfn",
+        "cache",
+        "checks",
+        "clrs",
+        "config",
+        "dl",
+        "handlers",
+        "helper",
+        "icon",
+        "log",
+        "mega",
+        "momw_types",
+        "notification",
+        "pseudomagic",
+        "rar",
+        "requests",
+        "sso",
+        "subcmds",
+        "umo",
+        "umocurldl",
+        "umonxm",
+        "wayback",],
     ))
 
     return exe
